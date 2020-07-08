@@ -8,216 +8,213 @@
     <script src="../../semantic/dist/semantic.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../../semantic/dist/semantic.min.css">
     <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
     <script src="../js/index.js"></script>
 </head>
+
 <body>
-    <div class="ui grid" id="navbar">
-        <div class="four wide column">
-            <a href="index.html">
-            <img src="../../photos/white_logo.png" id="nav-logo-img" alt="white logo"/>
-            </a>
-        </div>
-        <div class="six wide column">
-            <div class="ui action input">
-                <input type="text" placeholder="Search..." id="nav-input-text">
-                <button class="ui icon button" id="nav-search-icon-button">
-                    <i class="search icon"></i>
-                </button>
-            </div>
-        </div>
-        <div class="three wide column nav-div-account" id="div-account-lists">
-
-                <a class="nav-links browse item" href="">
-                    Account&Lists
-                    <i class="dropdown icon"></i>
-                </a>
-                <div class="ui fluid popup bottom left transition hidden" style="top: 555px; left: 1px; bottom: auto; right: auto; width: 840.2px;">
-                    <div class="ui two column relaxed divided grid">
-                        <div class="column">
-                            <h4 class="ui header"> Your Account </h4>
-                            <div class="ui link list">
-                                <a class="item"> SIGN IN </a>
-                                <a class="item"> SIGN UP </a>
-                            </div>
-                        </div>
-                        <div class="column">
-                            <h4 class="ui header"> Your Lists </h4>
-                            <div class="ui link list">
-                                <a class="item"> Create New List </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-        </div>
-        <div class="two wide column">
-            <a class="nav-links" href="cart.html">
-                <p id="nav-link-number-of-products">
-                    (2)
-                </p>
-                    <i class="shopping cart icon"></i> cart
-            </a>
+<div class="ui grid" id="nav-bar">
+    <div class="four wide column">
+        <a href="index.html">
+            <img src="../../photos/white_logo.png" id="navbar-logo" alt="white logo"/>
+        </a>
+    </div>
+    <div class="eight wide column">
+        <div class="ui action input">
+            <input type="text" placeholder="Search..." id="nav-input-text">
+            <button class="ui icon button">
+                <i class="search icon"></i>
+            </button>
         </div>
     </div>
+    <div class="two wide column middle aligned">
+        <a class="navbar-actions browse item" href="">
+            Account&Lists
+            <i class="dropdown icon"></i>
+        </a>
+        <div class="ui fluid popup bottom left transition hidden">
+            <div class="ui two column relaxed divided grid">
+                <div class="column">
+                    <h4 class="ui header"> Your Account </h4>
+                    <div class="ui link list">
+                        <a class="item"> SIGN IN </a>
+                        <a class="item"> SIGN UP </a>
+                    </div>
+                </div>
+                <div class="column">
+                    <h4 class="ui header"> Your Lists </h4>
+                    <div class="ui link list">
+                        <a class="item"> Create New List </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="two wide column">
+        <a class="navbar-actions" href="cart.html">
+            <div id="number-of-products">
+                2
+            </div>
+            <i class="shopping cart icon"></i> cart
+        </a>
+    </div>
+</div>
 
-
-<div id="all-products">
-    <div class="ui link cards" >
-        <div class="card my-class-card">
-            <div class="image product-img">
-                <img src="../../photos/oatmeal.jpg" alt="Oatmeal">
+<div class="ui link cards">
+    <div class="card">
+        <div class="image">
+            <img src="../../photos/oatmeal.jpg" alt="Oatmeal">
+        </div>
+        <div class="content">
+            <div class="header">
+                <a href="" class="product-name"> Oatmeal </a>
             </div>
-            <div class="content">
-                <div class="header div-name-of-product">
-                    <a href="" class="name-of-product-link"> Oatmeal </a>
-                </div>
-                <div class="description">
-                    Hot and fluffy oatmeal & protein powder cake
-                </div>
-            </div>
-            <div class="extra content">
-                 <span class="right floated">
-                     <button class="ui primary button add-to-cart-button">
-                         Add to cart
-                     </button>
-                 </span>
-                 <span>
-                    <div>
-                        <i class="shekel sign icon shekel-sign-icon"></i> 330.00
-                    </div>
-                    <div class="ui yellow rating"></div>
-                 </span>
+            <div class="description">
+                Hot and fluffy oatmeal & protein powder cake
             </div>
         </div>
-        <div class="card my-class-card">
-            <div class="image product-img">
-                <img src="../../photos/ws.png" alt="WS license"/>
-            </div>
-            <div class="content">
-                <div class="header div-name-of-product">
-                    <a href="" class="name-of-product-link"> WS license </a>
+        <div class="extra content">
+            <span class="right floated">
+                <button class="ui primary button">
+                    Add to cart
+                </button>
+            </span>
+            <span>
+                <div>
+                    <i class="shekel sign icon"></i> 330.00
                 </div>
-                <div class="description">
-                    Rare WS license. No need for military email
-                </div>
+                <div class="ui yellow rating"></div>
+            </span>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image">
+            <img src="../../photos/ws.png" alt="WS license"/>
+        </div>
+        <div class="content">
+            <div class="header">
+                <a href="" class="product-name"> WS license </a>
             </div>
-            <div class="extra content">
-                 <span class="right floated">
-                     <button class="ui primary button add-to-cart-button">
-                         Add to cart
-                     </button>
-                 </span>
-                <span>
-                    <div>
-                        <i class="shekel sign icon shekel-sign-icon"></i> 200.00
-                    </div>
-                    <div class="ui yellow rating"></div>
-                 </span>
+            <div class="description">
+                Rare WS license. No need for military email
             </div>
         </div>
-        <div class="card my-class-card">
-            <div class="image product-img">
-                <img src="../../photos/coconut.png" alt="Coconut"/>
-            </div>
-            <div class="content">
-                <div class="header div-name-of-product">
-                    <a href="" class="name-of-product-link"> Coconut </a>
+        <div class="extra content">
+            <span class="right floated">
+                <button class="ui primary button">
+                    Add to cart
+                </button>
+            </span>
+            <span>
+                <div>
+                    <i class="shekel sign icon"></i> 200.00
                 </div>
-                <div class="description">
-                    Good coconut to make oil for your beard
-                </div>
+                <div class="ui yellow rating"></div>
+            </span>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image">
+            <img src="../../photos/coconut.png" alt="Coconut"/>
+        </div>
+        <div class="content">
+            <div class="header">
+                <a href="" class="product-name"> Coconut </a>
             </div>
-            <div class="extra content">
-                 <span class="right floated">
-                     <button class="ui primary button add-to-cart-button">
-                         Add to cart
-                     </button>
-                 </span>
-                <span>
-                    <div>
-                        <i class="shekel sign icon shekel-sign-icon"></i> 100.00
-                    </div>
-                    <div class="ui yellow rating"></div>
-                 </span>
+            <div class="description">
+                Good coconut to make oil for your beard
             </div>
         </div>
-        <div class="card my-class-card">
-            <div class="image product-img">
-                <img src="../../photos/beard.jpg" alt="Beard exempt"/>
-            </div>
-            <div class="content">
-                <div class="header div-name-of-product">
-                    <a href="" class="name-of-product-link"> Beard exempt </a>
+        <div class="extra content">
+            <span class="right floated">
+                <button class="ui primary button">
+                    Add to cart
+                </button>
+            </span>
+            <span>
+                <div>
+                    <i class="shekel sign icon"></i> 100.00
                 </div>
-                <div class="description">
-                    Your very own license to grow beard
-                </div>
+                <div class="ui yellow rating"></div>
+            </span>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image">
+            <img src="../../photos/beard.jpg" alt="Beard exempt"/>
+        </div>
+        <div class="content">
+            <div class="header">
+                <a href="" class="product-name"> Beard exempt </a>
             </div>
-            <div class="extra content">
-                 <span class="right floated">
-                     <button class="ui primary button add-to-cart-button">
-                         Add to cart
-                     </button>
-                 </span>
-                <span>
-                    <div>
-                        <i class="shekel sign icon shekel-sign-icon"></i> 777.00
-                    </div>
-                    <div class="ui yellow rating"></div>
-                 </span>
+            <div class="description">
+                Your very own license to grow beard
             </div>
         </div>
-        <div class="card my-class-card">
-            <div class="image product-img">
-                <img src="../../photos/freedom.png" alt="A day off"/>
-            </div>
-            <div class="content">
-                <div class="header div-name-of-product">
-                    <a href="" class="name-of-product-link"> A day off </a>
+        <div class="extra content">
+            <span class="right floated">
+                <button class="ui primary button">
+                    Add to cart
+                </button>
+            </span>
+            <span>
+                <div>
+                    <i class="shekel sign icon"></i> 777.00
                 </div>
-                <div class="description">
-                    1 day off work
-                </div>
+                <div class="ui yellow rating"></div>
+            </span>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image">
+            <img src="../../photos/freedom.png" alt="A day off"/>
+        </div>
+        <div class="content">
+            <div class="header">
+                <a href="" class="product-name"> A day off </a>
             </div>
-            <div class="extra content">
-                 <span class="right floated">
-                     <button class="ui primary button add-to-cart-button">
-                         Add to cart
-                     </button>
-                 </span>
-                <span>
-                    <div>
-                        <i class="shekel sign icon shekel-sign-icon"></i> 1,000,000.00
-                    </div>
-                    <div class="ui yellow rating"></div>
-                 </span>
+            <div class="description">
+                1 day off work
             </div>
         </div>
-        <div class="card my-class-card">
-            <div class="image product-img">
-                <img src="../../photos/js-book.png" alt="JS book for beginners"/>
-            </div>
-            <div class="content">
-                <div class="header div-name-of-product">
-                    <a href="" class="name-of-product-link"> JS book for beginners </a>
+        <div class="extra content">
+            <span class="right floated">
+                <button class="ui primary button">
+                    Add to cart
+                </button>
+            </span>
+            <span>
+                <div>
+                    <i class="shekel sign icon"></i> 1,000,000.00
                 </div>
-                <div class="description">
-                    Digital javascript book to start coding your first js website
+                <div class="ui yellow rating"></div>
+            </span>
+        </div>
+    </div>
+    <div class="card">
+        <div class="image">
+            <img src="../../photos/js-book.png" alt="JS book for beginners"/>
+        </div>
+        <div class="content">
+            <div class="header">
+                <a href="" class="product-name"> JS book for beginners </a>
+            </div>
+            <div class="description">
+                Digital javascript book to start coding your first js website
+            </div>
+        </div>
+        <div class="extra content">
+            <span class="right floated">
+                <button class="ui primary button">
+                    Add to cart
+                </button>
+            </span>
+            <span>
+                <div>
+                    <i class="shekel sign icon"></i> 330.00
                 </div>
-            </div>
-            <div class="extra content">
-                 <span class="right floated">
-                     <button class="ui primary button add-to-cart-button">
-                         Add to cart
-                     </button>
-                 </span>
-                <span>
-                    <div>
-                        <i class="shekel sign icon shekel-sign-icon"></i> 330.00
-                    </div>
-                    <div class="ui yellow rating"></div>
-                 </span>
-            </div>
+                <div class="ui yellow rating"></div>
+            </span>
         </div>
     </div>
 </div>

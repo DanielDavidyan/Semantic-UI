@@ -1,0 +1,31 @@
+#nav-bar {
+  margin: 0 auto;
+  background-color: #2f2b2b;
+}
+#navbar-logo {
+  width: 10em;
+}
+#nav-input-text {
+  width: 30vw;
+}
+.ui.icon.button {
+  background-color: #E1A616;
+}
+.navbar-actions {
+  align-self: center;
+  color: #FFFFFF;
+}
+.navbar-actions:hover {
+  color: #FFFFFF;
+}
+#number-of-products {
+  color: #E1A616;
+  font-weight: bold;
+}
+#number-of-products:before {
+  content: "(";
+}
+#number-of-products:after {
+  content: ")";
+}
+/*# sourceMappingURL=navbar.css.map */

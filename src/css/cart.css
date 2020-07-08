@@ -1,24 +1,19 @@
-.my-item {
-  padding: 2vw !important;
-}
-.div-close-icon {
-  float: right;
+.close-icon {
   font-size: 1.5em;
 }
-#button-continue-shopping {
-  background-color: #2f2b2b;
-  color: white;
-  border: solid 1px black;
-}
-#button-checkout {
+#checkout {
   background-color: #E1A616;
-  color: #2f2b2b;
+  color: #000000;
   border: solid 1px #743e05;
 }
-#div-shopping-cart {
+#shopping-cart {
   padding: 2% 10%;
 }
-#buttons-shopping {
+#cart-actions {
   float: right;
+}
+#title {
+  font-size: x-large;
+  font-weight: bolder;
 }
 /*# sourceMappingURL=cart.css.map */
