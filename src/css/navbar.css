@@ -1,31 +1,30 @@
-#nav-bar {
+#navbar {
   margin: 0 auto;
   background-color: #2f2b2b;
 }
-#navbar-logo {
+#navbar:hover {
+  color: #FFFFFF;
+}
+#navbar #logo {
   width: 10em;
 }
-#nav-input-text {
+#navbar #search {
   width: 30vw;
 }
-.ui.icon.button {
+#navbar .icon.button {
   background-color: #E1A616;
 }
-.navbar-actions {
-  align-self: center;
+#navbar .navbar-actions {
   color: #FFFFFF;
 }
-.navbar-actions:hover {
-  color: #FFFFFF;
-}
-#number-of-products {
+#navbar .navbar-actions #number-of-products {
   color: #E1A616;
   font-weight: bold;
 }
-#number-of-products:before {
+#navbar .navbar-actions #number-of-products:before {
   content: "(";
 }
-#number-of-products:after {
+#navbar .navbar-actions #number-of-products:after {
   content: ")";
 }
 /*# sourceMappingURL=navbar.css.map */

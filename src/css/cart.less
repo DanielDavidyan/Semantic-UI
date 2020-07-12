@@ -1,24 +1,24 @@
 @import "./colors.less";
 
-.close-icon {
-  font-size: 1.5em;
-}
-
-#checkout {
-  background-color: @orange-color;
-  color: @black-color;
-  border: solid 1px @brown-color;
+#title {
+  font-size: x-large;
+  font-weight: bolder;
 }
 
 #shopping-cart {
   padding: 2% 10%;
-}
 
-#cart-actions {
-  float: right;
-}
+  .close.icon {
+    font-size: 1.5em !important;
+  }
 
-#title {
-  font-size: x-large;
-  font-weight: bolder;
+  #cart-actions {
+    float: right;
+
+    #checkout {
+      background: @orange;
+      color: @black;
+      border: solid 1px @brown;
+    }
+  }
 }

@@ -1,42 +1,43 @@
 @import "./colors.less";
 
-.ui.link.cards {
+.cards {
   padding: 2%;
-}
 
-.card {
-  margin-right: 2% !important;
-  margin-left: 2% !important;
-}
+  .card {
+    margin: 2% 2% !important;
 
-.card:hover {
-  .image {
-    opacity: 0.6;
+    &:hover {
+      .image {
+        opacity: 0.6;
+      }
+    }
+
+    .image {
+      background-color: @white !important;
+    }
+
+    .header {
+      &:hover {
+        .product-name {
+          color: @orange;
+        }
+
+        text-decoration: underline;
+      }
+
+      .product-name {
+        color: @black;
+      }
+    }
+
+    .primary.button {
+      color: @black !important;
+      background-color: @orange !important;
+      border: solid 1px @brown !important;
+
+      &:hover {
+        background-color: @bright-orange !important;
+      }
+    }
   }
-}
-
-.image {
-  background-color: @white-color !important;
-}
-
-.header:hover {
-  .product-name {
-    color: @orange-color;
-  }
-
-  text-decoration: underline;
-}
-
-.product-name {
-  color: @black-color;
-}
-
-.ui.primary.button {
-  color: @black-color !important;
-  background-color: @orange-color !important;
-  border: solid 1px @brown-color !important;
-}
-
-.ui.primary.button:hover {
-  background-color: @bright-orange-color !important;
 }

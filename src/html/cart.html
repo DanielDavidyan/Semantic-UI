@@ -7,42 +7,42 @@
     <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
     <script src="../../semantic/dist/semantic.min.js"></script>
     <link rel="stylesheet" type="text/css" href="../../semantic/dist/semantic.min.css">
-    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
     <link rel="stylesheet" type="text/css" href="../css/cart.css">
+    <link rel="stylesheet" type="text/css" href="../css/navbar.css">
     <script src="../js/index.js"></script>
 </head>
 
 <body>
-<div class="ui grid" id="nav-bar">
+<div class="ui grid" id="navbar">
     <div class="four wide column">
         <a href="index.html">
-            <img src="../../photos/white_logo.png" id="navbar-logo" alt="white logo"/>
+            <img src="../../photos/white_logo.png" id="logo" alt="white logo"/>
         </a>
     </div>
     <div class="eight wide column">
         <div class="ui action input">
-            <input type="text" placeholder="Search..." id="nav-input-text">
+            <input type="text" placeholder="Search..." id="search">
             <button class="ui icon button">
                 <i class="search icon"></i>
             </button>
         </div>
     </div>
     <div class="two wide column middle aligned">
-        <a class="navbar-actions browse item" href="">
+        <a class="actions browse item navbar-actions" href="">
             Account&Lists
             <i class="dropdown icon"></i>
         </a>
         <div class="ui fluid popup bottom left transition hidden">
             <div class="ui two column relaxed divided grid">
                 <div class="column">
-                    <h4 class="ui header"> Your Account </h4>
+                    <p class="ui header"> Your Account </p>
                     <div class="ui link list">
                         <a class="item"> SIGN IN </a>
                         <a class="item"> SIGN UP </a>
                     </div>
                 </div>
                 <div class="column">
-                    <h4 class="ui header"> Your Lists </h4>
+                    <p class="ui header"> Your Lists </p>
                     <div class="ui link list">
                         <a class="item"> Create New List </a>
                     </div>
@@ -85,9 +85,7 @@
                     </select>
                 </div>
             </div>
-            <div class="close-icon">
-                <a> <i class="red close icon"></i> </a>
-            </div>
+            <a> <i class="red close icon"></i> </a>
         </div>
         <div class="item">
             <div class="image">
@@ -106,9 +104,7 @@
                     </input>
                 </div>
             </div>
-            <div class="close-icon">
-                <a> <i class="red close icon"></i> </a>
-            </div>
+            <a> <i class="red close icon"></i> </a>
         </div>
         <div class="item">
             <h3> Total Price: <i class="shekel sign icon shekel-sign-icon"></i> 430.00 </h3>

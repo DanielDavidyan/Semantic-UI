@@ -1,40 +1,39 @@
 @import "./colors.less";
 
-#nav-bar {
+#navbar {
   margin: 0 auto;
-  background-color: @faded-black-color;
-}
+  background-color: @background;
 
-#navbar-logo {
-  width: 10em;
-}
+  &:hover {
+    color: @white;
+  }
 
-#nav-input-text {
-  width: 30vw;
-}
+  #logo {
+    width: 10em;
+  }
 
-.ui.icon.button {
-  background-color: @orange-color;
-}
+  #search {
+    width: 30vw;
+  }
 
-.navbar-actions {
-  align-self: center;
-  color: @white-color;
-}
+  .icon.button {
+    background-color: @orange;
+  }
 
-.navbar-actions:hover {
-  color: @white-color;
-}
+  .navbar-actions {
+    color: @white;
 
-#number-of-products {
-  color: @orange-color;
-  font-weight: bold;
-}
+    #number-of-products {
+      color: @orange;
+      font-weight: bold;
 
-#number-of-products:before {
-  content: "(";
-}
+      &:before {
+        content: "(";
+      }
 
-#number-of-products:after {
-  content: ")";
+      &:after {
+        content: ")";
+      }
+    }
+  }
 }

@@ -1,31 +1,30 @@
-.ui.link.cards {
+.cards {
   padding: 2%;
 }
-.card {
-  margin-right: 2% !important;
-  margin-left: 2% !important;
+.cards .card {
+  margin: 2% 2% !important;
 }
-.card:hover .image {
+.cards .card:hover .image {
   opacity: 0.6;
 }
-.image {
+.cards .card .image {
   background-color: #FFFFFF !important;
 }
-.header:hover {
+.cards .card .header:hover {
   text-decoration: underline;
 }
-.header:hover .product-name {
+.cards .card .header:hover .product-name {
   color: #E1A616;
 }
-.product-name {
+.cards .card .header .product-name {
   color: #000000;
 }
-.ui.primary.button {
+.cards .card .primary.button {
   color: #000000 !important;
   background-color: #E1A616 !important;
   border: solid 1px #743e05 !important;
 }
-.ui.primary.button:hover {
+.cards .card .primary.button:hover {
   background-color: #eeb428 !important;
 }
 /*# sourceMappingURL=index.css.map */
