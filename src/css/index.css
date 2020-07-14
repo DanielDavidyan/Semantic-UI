@@ -1,0 +1,30 @@
+.cards {
+  padding: 2%;
+}
+.cards .card {
+  margin: 2% 2% !important;
+}
+.cards .card:hover .image {
+  opacity: 0.6;
+}
+.cards .card .image {
+  background-color: #FFFFFF !important;
+}
+.cards .card .header:hover {
+  text-decoration: underline;
+}
+.cards .card .header:hover .product-name {
+  color: #E1A616;
+}
+.cards .card .header .product-name {
+  color: #000000;
+}
+.cards .card .primary.button {
+  color: #000000 !important;
+  background-color: #E1A616 !important;
+  border: solid 1px #743e05 !important;
+}
+.cards .card .primary.button:hover {
+  background-color: #eeb428 !important;
+}
+/*# sourceMappingURL=index.css.map */

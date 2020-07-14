@@ -1,0 +1,19 @@
+#title {
+  font-size: x-large;
+  font-weight: bolder;
+}
+#shopping-cart {
+  padding: 2% 10%;
+}
+#shopping-cart .close.icon {
+  font-size: 1.5em !important;
+}
+#shopping-cart #cart-actions {
+  float: right;
+}
+#shopping-cart #cart-actions #checkout {
+  background: #E1A616;
+  color: #000000;
+  border: solid 1px #743e05;
+}
+/*# sourceMappingURL=cart.css.map */
