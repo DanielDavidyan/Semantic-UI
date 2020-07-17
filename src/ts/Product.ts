@@ -1,89 +1,72 @@
-class Product {
-    public name: string = "";
-    public description: string = "";
-    public price: number = 0;
-    public img: string = "";
-    public limit: number = 0;
-
-    public constructor(name: string, description: string, price: number, img: string, limit: number) {
-        this.name = name;
-        this.description = description;
-        this.price = price;
-        this.img = img;
-        this.limit = limit;
-    }
-
-    public updateProductAmount(limit: number) {
-        this.limit = limit;
-    }
+interface Product {
+    name: string;
+    description?: string;
+    price: number;
+    img?: string;
+    limit: number;
 }
 
 class Cart {
-    public products: Product[];
-    public totalPrice: number = 0;
-    public noOfProducts: number = 0;
+    productsInTheCart: Record<string, number>
 
-    public constructor() {
-        this.products = [];
-        this.totalPrice = 0;
-        this.noOfProducts = 0;
+    constructor() {
+        this.productsInTheCart = {};
     }
 
     public addProduct(product: Product) {
-        this.products.push(product);
-        this.totalPrice += product.price;
-        this.noOfProducts++;
+        if (product.limit > 0)
+            this.productsInTheCart[product.name] = 1;
+        else
+            console.log("Sold out!");
+    }
+
+    public updateProductAmount(product: Product, amount: number) {
+        if (product.limit >= amount)
+            this.productsInTheCart[product.name] = amount;
+        else
+            console.log("You can buy maximum " + product.limit + " " + product.name);
     }
 
     public removeProduct(product: Product) {
-        function foundIt(element) {
-            return (element.name !== product.name);
-        }
-
-        this.products = this.products.filter(foundIt);
-        this.totalPrice -= product.price;
-        this.noOfProducts--;
+        delete this.productsInTheCart[product.name];
     }
 
-    public checkout() {
-        this.products = []
-        this.noOfProducts = 0;
-        this.totalPrice = 0;
+
+    public getTotalPrice(stock: Product[]) {
+        const arrayOfproductsInTheCart = Object.keys(this.productsInTheCart);
+        const totalPrice = arrayOfproductsInTheCart.reduce((total, item) => {
+            return total + (stock.find(product => product.name === item).price) * this.productsInTheCart[item]
+        }, 0);
+        console.log('total price: ', totalPrice);
+    }
+
+
+    public checkout(stock: Product[]) {
+        for (let productName in this.productsInTheCart) {
+             let stockProduct = stock.find(x => x.name === productName);
+             stockProduct.limit -= this.productsInTheCart[productName];
+        }
+        this.productsInTheCart = {};
     }
 }
 
 (function main() {
-    console.log("---------------------------------------------------------");
+    const prod1 = {name: "Bamba", price: 5, limit: 10};
+    const prod2 = {name: "Bisli", price: 7, limit: 15};
+    const prod3 = {name: "Apropo", price: 4, limit: 20};
+    const stock = [prod1, prod2, prod3];
 
-    let prod1 = new Product("bamba", "nice", 5, "www.bamba.co.il", 20);
-    let prod2 = new Product("bisli", "great", 10, "www.bisli.co.il", 10);
-    let prod3 = new Product("apropo", "good", 2, "www.apropo.co.il", 5);
+    const cart = new Cart();
+    for (let newProduct in stock) {
+        cart.addProduct(stock[newProduct]);
+    }
 
-    console.log("check the method updateProductAmount");
-    console.log("the limit of " + prod1.name + " before update is = " + prod1.limit);
-    prod1.updateProductAmount(50);
-    console.log("the limit of " + prod1.name + " after update is = " + prod1.limit);
-
-    let cart1 = new Cart();
-    console.log("empty cart");
-    console.log(cart1);
-
-    console.log("check the method addProduct");
-    cart1.addProduct(prod1);
-    cart1.addProduct(prod2);
-    cart1.addProduct(prod3);
-
-    console.log("full cart");
-    console.log(cart1);
-    console.log("totalPrice = " + cart1.totalPrice + " noOfProducts = " + cart1.noOfProducts);
-
-    console.log("check the method remove product (remove bisli)");
-    cart1.removeProduct(prod2);
-    console.log(cart1);
-    console.log("totalPrice = " + cart1.totalPrice + " noOfProducts = " + cart1.noOfProducts);
-
-    console.log("checkout");
-    cart1.checkout();
-    console.log("totalPrice = " + cart1.totalPrice + " noOfProducts = " + cart1.noOfProducts);
-    console.log("---------------------------------------------------------");
+    console.log('Stock:',stock);
+    cart.updateProductAmount(prod2, 2);
+    cart.getTotalPrice(stock);
+    cart.removeProduct(prod1);
+    console.log("Cart after remove " + prod1.name, cart);
+    console.log('before checkout',stock);
+    cart.checkout(stock);
+    console.log('after checkout',stock);
 })();
